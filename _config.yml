@@ -8,7 +8,7 @@ subtitle: 봄이네집에 오신 것을 환영합니다.
 description:
 author: 정휘준
 language: ko
-timezone: UTC + 09:00 (KST)
+timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
