@@ -12,10 +12,9 @@ timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://seulgiwendy.github.io
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink_defaults: :year/:month/:day/:title/
 
 # Directory
 source_dir: source
