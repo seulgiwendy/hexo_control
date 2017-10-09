@@ -1,5 +1,5 @@
 ---
-title: which-kind-of-programmar-i-want-to-be
+title: 나는 어떤 개발자가 돼야 할까요?
 date: 2017-10-09 21:25:08
 tags:
 	- daily
