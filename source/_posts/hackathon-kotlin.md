@@ -1,7 +1,7 @@
 ---
 title: 해커톤 나가서 삽질하기 (1) - 코틀린으로 DTO를 만들어보자. 
 date: 2018-03-19 11:59:48
-tags:
+categories:
     - hackathon
     - kotlin
     - java
