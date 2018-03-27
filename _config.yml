@@ -83,6 +83,7 @@ archive_generator:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
+  delete: false
 	type: git
 	repo: https://github.com/seulgiwendy/seulgiwendy.github.io
   	branch: master
