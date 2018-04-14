@@ -87,4 +87,9 @@ categories:
 
 **여보, 이번 추석은 후위 순회 할까?**
 
+---
+
+#### 연습문제 풀어보기
+
+[링크](https://jiwondh.github.io/2017/10/15/tree_traversal/#-%EC%A4%91%EC%9C%84-%EC%88%9C%ED%9A%8C-inorder-traversal)
 
