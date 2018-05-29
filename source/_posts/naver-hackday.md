@@ -304,6 +304,12 @@ child component 몇 개를 더 분리해낼 수 있는 지점이 보이지만 �
 - [프론트엔드](https://github.com/seulgiwendy/hackday-shopping-frontend)
 - [백엔드](https://github.com/seulgiwendy/hackday-shopping)
 
+---
+
+**기술면접에 가게 됐다.** 곧 면접 후기도 쓸게요. 
+
+*내가 네이버 면접이라니 ㅜㅜㅜㅜㅜㅜ*
+
 
 
 
