@@ -189,6 +189,16 @@ return hello.toString();
 
 이게 훨씬 좋은 구현이다. 
 
+**추가**
+
+정상혁([Sanghyuck Jung](https://www.facebook.com/benelog))님이 아래와 같은 내용을 보충해 주셨다. 
+
+*Java 9에서의 String concat 최적화* - StringConcatFactory 로 연결된다. (JDK 9 이상에서만 존재)
+
+[http://openjdk.java.net/jeps/280](http://openjdk.java.net/jeps/280)
+
+
+
 **.concat()이란 것도 있다면서요?**
 
 있다.
