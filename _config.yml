@@ -71,19 +71,26 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: chiangmai
+theme: purely
 
-# hexo-generator-archive
-archive_generator:
-    per_page: 0
-    yearly: false
-    monthly: false
-    daily: false
+# Header
+menu:
+  home: /
+  archives: /archives
+
+# Schema
+color: blue
+
+# Content
+excerpt_link: Read More
+fancybox: true
+disqus_shortname: bomee
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   delete: false
 	type: git
-	repo: https://github.com/seulgiwendy/seulgiwendy.github.io
+	repo: https://github.com/wheejuni/seulgiwendy.github.io
   	branch: master
