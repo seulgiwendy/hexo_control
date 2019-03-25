@@ -310,7 +310,7 @@ public class RandomGenerator {
 
 #### 백기선님의 동영상 - 더 좋은 개발자가 되는 법
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yEcCQZlFmaM/0.jpg)](https://www.youtube.com/watch?v=yEcCQZlFmaM)
+[!["나는 정말 이걸 좋아 하나?"](https://img.youtube.com/vi/yEcCQZlFmaM/0.jpg)](https://www.youtube.com/watch?v=yEcCQZlFmaM)
 
 좋아하면 잘하게 된다. 좋아하기는 어려운 일인 것 같긴 하다. 
 
