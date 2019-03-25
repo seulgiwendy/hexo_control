@@ -48,7 +48,8 @@ Github issue: [쇼핑 실시간 상품 경매 플랫폼](https://github.com/NAVE
 
 Java를 사용할 때 아무 생각없이 객체를 만들고 주고받지만, 내부의 element가 바뀌면 안 될 상황에서 immutability를 고려하지 않는 경우가 많다.
 
-특히 ```java.util.Collection```의 하위 클래스들을 사용하는 경우 이 점을 충분히 고려하여 불변해야 할 객체를 확정짓는 것이 좋다. 
+특히 java.util.Collection의 하위 클래스들을 사용하는 경우 이 점을 충분히 고려하여 불변해야 할 객체를 확정짓는 것이 좋다. 
+
 
 ```java
 ...
@@ -62,7 +63,7 @@ List<String> shitUrls = dumbSites.getUrls();
 List<String> shitUrls = Collections.unmodifiableList(dumbSites.getUrls());
 ```
 
-또한 parameter로 받을 객체, 지역 변수들에 대해서도, 최초 할당 이후 재할당이 필요없는 변수라면 ```final``` 예약어를 사용하여 최소한 객체 자체가 뒤바뀌는 일은 없도록 확실히 해 주자. 
+또한 parameter로 받을 객체, 지역 변수들에 대해서도, 최초 할당 이후 재할당이 필요없는 변수라면 final 예약어를 사용하여 최소한 객체 자체가 뒤바뀌는 일은 없도록 확실히 해 주자. 
 
 ```java
 public String sayHelloToYou(String yourName) {
@@ -94,9 +95,9 @@ Kotlin이 null을 다루는 방식, 그리고 null-safety를 보장해주는 방
 
 null이 그지같은 이유는 NPE를 발생시키기 때문이다. 
 
-사실 NPE만 아니라면, 혹은 NPE의 수퍼클래스가 ```RuntimeException```이 아니라면 Java에서 null을 다루는 것이 그렇게 스트레스받는 일이 아닐 수도 있다. 
+사실 NPE만 아니라면, 혹은 NPE의 수퍼클래스가 RuntimeException이 아니라면 Java에서 null을 다루는 것이 그렇게 스트레스받는 일이 아닐 수도 있다. 
 
-어차피 대부분의 상황에서 NPE는 에러로써 애플리케이션이 뻗어버릴 수밖에 없는데 차라리 ```try - catch```로 잡아내는 것이 낫지 않겠는가? 개인적인 생각이다.
+어차피 대부분의 상황에서 NPE는 에러로써 애플리케이션이 뻗어버릴 수밖에 없는데 차라리 try - catch로 잡아내는 것이 낫지 않겠는가? 개인적인 생각이다.
 
 ---
 
@@ -144,11 +145,11 @@ public void processShit() {
 
 ---
 
-#### ```try-with-resources``` 를 적극 활용하라
+#### try-with-resources 를 적극 활용하라
 
 Closeable한 자원을 사용하는 경우 제때 닫아주지 않으면 성능에 악영향을 미친다. 
 
-그동안 우리는 ```try - catch - finally``` 패턴을 많이 사용해왔다. 그러나 Java 1.7 이상만 되어도 훨씬 간결한 syntax의 ```try - with - resources``` 를 활용할 수 있으므로 이를 적극 활용하자. 
+그동안 우리는 try - catch - finally 패턴을 많이 사용해왔다. 그러나 Java 1.7 이상만 되어도 훨씬 간결한 syntax의 try - with - resources를 활용할 수 있으므로 이를 적극 활용하자. 
 
 ```java
 ...
@@ -168,7 +169,7 @@ finally {
 }
 ```
 
-```finally```를 없애고 가독성 높은 코드를 만들기 위해 아래와 같이 리팩토링한다. 
+finally를 없애고 가독성 높은 코드를 만들기 위해 아래와 같이 리팩토링한다. 
 
 ```java
 try(BufferedReader in = new BufferedReader(...)) {
@@ -189,7 +190,7 @@ Spring Bean은 verbose한 싱글턴 패턴 코드 없이 싱글턴을 보장할 
 그러나 아래의 고려사항을 충분히 생각해볼 필요가 있다.
 
 - 굳이 Singleton 상태일 이유가 있을까?
-    - ```static method``` 사용하면 안되는가? 
+    - static method 사용하면 안되는가? 
     - Singleton 상태에서, 부가 기능이 추가될 이유가 있는가? 
 - 모든 Spring Bean에서 이 객체를 주입받을 필요가 있는가?
     - scope를 고려하라
@@ -197,7 +198,7 @@ Spring Bean은 verbose한 싱글턴 패턴 코드 없이 싱글턴을 보장할 
         - Bean의 갯수, 혹은 initializing logic이 Spring의 Application Context의 초기 기동 시간에 직접적인 영향을 끼친다는 점을 고려하라.
     - 실행 환경에 따라 사용되는 Bean이 다르진 않는가?
         - XML config의 경우 설정 파일을 분리하여 환경에 따른 bean instantiation이 가능하도록 설계하라. 
-        - Java config, 특히 Spring Boot의 경우, ```@ActiveProfiles, @Profile```을 적극적으로 활용하라. 
+        - Java config, 특히 Spring Boot의 경우, @ActiveProfiles, @Profile을 적극적으로 활용하라. 
 
 **DEV 프로필에서만 사용될 컴포넌트의 예시**
 
@@ -277,7 +278,7 @@ public class RandomGenerator {
 
 - 재귀호출이 몇 번 일어날지 보장할 수 없다. 
     - 만약 cache에 1억건의 엔트리가 이미 들어있는 상황이라면?
-    - 만약 ```RandomStringGenerator``` 의 로직에 문제가 있어, 랜덤값이 보장이 안 되고 있는 상황이라면? 
+    - 만약 RandomStringGenerator의 로직에 문제가 있어, 랜덤값이 보장이 안 되고 있는 상황이라면? 
 - 문자열을 요청할때마다 내부적으로 일일이 비교연산이 일어날 텐데, 그 비용이 너무 커 보인다. 
 - **UUID**를 활용하여 리팩토링한다.
 
