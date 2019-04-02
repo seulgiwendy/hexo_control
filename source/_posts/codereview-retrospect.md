@@ -30,7 +30,7 @@ categories:
 
 Github issue: [쇼핑 실시간 상품 경매 플랫폼](https://github.com/NAVER-CAMPUS-HACKDAY/common/issues/6)
 
-핵데이 원서접수 페이지: https://recruit.navercorp.com/naver/job/detail/developer?annoId=20002666&classId=&jobId=&entTypeCd=004&searchTxt=&searchSysComCd=
+핵데이 원서접수 페이지 [바로가기](https://recruit.navercorp.com/naver/job/detail/developer?annoId=20002666&classId=&jobId=&entTypeCd=004&searchTxt=&searchSysComCd=)
 
 ### 내가 받은 코드리뷰 유형별 요약
 
